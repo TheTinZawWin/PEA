@@ -1,0 +1,91 @@
+﻿
+
+<div class="card">
+
+    <div class="card-header">
+        <div class="col-xl-12 col-lg-12 col-sm-12 mb-3 small  sm-mb-0 sm-pt-0">
+            <h3 class="font-weight-bold ">Update Employee</h3>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row col-xl-12 col-lg-12 col-sm-12 ">
+            <div class="col-xl-6 col-lg-6 col-sm-12  mb-3  sm-mb-2 sm-pt-0">
+                <div class="mb-3 small sm-mb-0">Employee Id <h7 class="text-danger">*</h7></div>
+                <input id="updateemployeeId" class=" form-control  sm-mb-0 sm-pb-0" type="text" autocomplete="off" maxlength="20" disabled/>
+            </div>
+            <div class="col-xl-5 col-lg-5 col-sm-12  mb-3  sm-mb-2 sm-pt-0">
+                <div class="mb-3 small sm-mb-0">Name <h7 class="text-danger">*</h7></div>
+                <input id="updatename" class=" form-control  sm-mb-0 sm-pb-0" type="text" autocomplete="off" maxlength="30" />
+            </div>
+        </div>
+        <div class="row col-xl-12 col-lg-12 col-sm-12 ">
+            <div class="col-xl-6 col-lg-6 col-sm-12  mb-3  sm-mb-2 sm-pt-0">
+                <div class="mb-3 small sm-mb-0">Password <h7 class="text-danger">*</h7></div>
+                <input id="updatepassword" class=" form-control  sm-mb-0 sm-pb-0" type="text" autocomplete="off" maxlength="30" />
+            </div>
+            <div class="col-xl-6 col-lg-6 col-sm-12  mb-3  sm-mb-2 sm-pt-0">
+                <div class="mb-3 small sm-mb-0">Confirm Password <h7 class="text-danger">*</h7></div>
+                <input id="updateconfirmpassword" class=" form-control  sm-mb-0 sm-pb-0" type="text" autocomplete="off" maxlength="30" />
+            </div>
+        </div>
+        <div class="row col-xl-12 col-lg-12 col-sm-12 ">
+            <div class="col-xl-6 col-lg-6 col-sm-12  mb-3  sm-mb-2 sm-pt-0">
+                <div class="mb-3 small sm-mb-0">Email <h7 class="text-danger">*</h7></div>
+                <input id="updateemail" class=" form-control  sm-mb-0 sm-pb-0" type="text" autocomplete="off" maxlength="30" />
+            </div>
+            <div class="col-xl-6 col-lg-6 col-sm-12  mb-3  sm-mb-2 sm-pt-0">
+                <div class="mb-3 small sm-mb-0">Phone No <h7 class="text-danger">*</h7></div>
+                <input id="updatephoneno" class=" form-control  sm-mb-0 sm-pb-0" type="number" autocomplete="off" maxlength="11" />
+            </div>
+        </div>
+        <div class="row col-xl-12 col-lg-12 col-sm-12 ">
+            <div class="col-xl-6 col-lg-6 col-sm-12  mb-3  sm-mb-2 sm-pt-0">
+                <div class="mb-3 small sm-mb-0">Department <h7 class="text-danger">*</h7></div>
+                <select id="updatedepartment" class="form-control ims-select2" placeholder="Select Department"></select>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-sm-12  mb-3 sm-pt-0 sm-mb-2">
+                <div class="mb-3 small sm-mb-0">Join Date  <h7 class="text-danger">*</h7></div>
+
+                <input type="text" class="form-control employeedate bggray" id="updatejoinDate" placeholder="Join Date" readonly="readonly">
+
+
+            </div>
+        </div>
+        <div class="row col-xl-12 col-lg-12 col-sm-12 ">
+            <div class="col-xl-12 col-lg-12 col-sm-12  mb-3  sm-pt-0 sm-mb-0 ml-3 mt-3" id="">
+                <div class="row fa-sm">
+                    <div class="col-xl-12 col-lg-12 col-sm-12 col-md-12 col-xs-12 ">
+                        <input type="checkbox" class="form-check-input " id="updatecheckActive" value="1"  >
+                        <span>Active <h7 class="text-danger">*</h7></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+    <div class="card-footer">
+        <div class="row">
+            <div class=" row col-xl-7 col-lg-7 col-sm-12 m-0 p-0">
+                @*<h7 class="text-danger">*Note:If you don't want to change your password,Please reenter original password.</h7>*@
+            </div>
+            <div class="row col-lg-5 col-md-12 col-sm-12 mb-2 justify-content-end">
+                <div class="col-md-6 col-sm-12 w-50">
+                    <button id="btnUpdateEmployeeCancel" type="button" class="btn btn-secondary  w-100" data-toggle="modal" data-target="">Close</button>
+                </div>
+                <div class="col-md-6 col-sm-12 w-50">
+                    <button id="btnUpdateEmployeeConfirm" type="button" class="btn btn-primary  w-100" data-toggle="modal" data-target="">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

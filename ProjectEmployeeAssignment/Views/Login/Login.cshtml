@@ -1,0 +1,106 @@
+﻿@model PEA_Common.UserModel
+@{
+    ViewBag.Title = "LoginPage";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @*<title>@ViewBag.Title - My ASP.NET Application</title>*@
+    @Styles.Render("~/content/header")
+    @Scripts.Render("~/scripts/header")
+    <link href="~/Content/cs/pea.css" rel="stylesheet" />
+    <link href="~/Content/cs/pea-menu-stylesheet.css" rel="stylesheet" />
+    <link href="~/Content/cs/pea-navbar-stylesheet.css" rel="stylesheet" />
+</head>
+<body id="login-body">
+    <main class="login-main">
+        @*style="margin-bottom: -4px;width:300px;"*@
+        <div style="margin-left:65px;">
+            <img src="~/Content/Image/task.png" class="img-responsive" style="width: 200px; ">
+        </div>
+
+        <div class="login-size mt-3">
+            <div class="login-header">
+
+                <p class="login-header-title">
+                    Project Employee <br />
+                    Assignment
+                </p>
+            </div>
+            <div>
+                @using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "login-form" }))
+                {
+                    <div class="form-horizontal mt-3">
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group row">
+                            <div class="col-4">  @Html.LabelFor(model => model.UserId, htmlAttributes: new { @class = "control-label " })</div>
+
+                            <div class="col-6">
+                                @Html.EditorFor(model => model.UserId, new { htmlAttributes = new { @class = "form-control userId" }, })
+                                @Html.ValidationMessageFor(model => model.UserId, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-2">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-4">
+                                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label ", })
+                            </div>
+
+                            <div class="col-6">
+                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control password", autocomplete = "off" } })
+                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-2">
+
+                            </div>
+                        </div>
+
+                        <div class="login-button-area mb-4">
+                            <button id="btnLogin" type="button" class="btn btn-primary  w-25" data-toggle="modal" data-target="">Login</button>
+
+                        </div>
+                    </div>
+
+                }
+            </div>
+        </div>
+
+
+    </main>
+    <div class="modal fade" id="MyModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content text-center">
+                <div class="modal-header d-block">
+                    <h5 class="modal-title" id="ModalHeader"></h5>
+                </div>
+                <div class="modal-body" id="ModalBody"></div>
+                <div class="modal-footer" id="ModalFooter">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="loading-overlay" class="d-none">
+        @*<div id="loading-message" class="loader"></div>
+            <div class="lds-facebook"><div class="bg-danger"></div><div class="bg-success"></div><div class="bg-primary"></div></div>*@
+        <div class="loadingcenter">
+            <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
+    </div>
+    <footer>
+        @Scripts.Render("~/scripts/footer")
+
+
+        @Scripts.Render("~/scripts/common")
+        @Scripts.Render("~/scripts/login")
+
+    </footer>
+</body>
+</html>

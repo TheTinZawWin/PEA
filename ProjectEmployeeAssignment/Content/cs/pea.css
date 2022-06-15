@@ -1,0 +1,318 @@
+﻿
+body {
+    font-size: 16px !important;
+    overflow: hidden;
+   
+    background-color: #d9d7d7;
+}
+.body-content {
+    height: calc(100vh - 3rem);
+    margin-top: 3rem !important;
+    overflow: auto;
+}
+.navbar-header {
+    width: 200px;
+}
+
+.logo-img {
+    width: 90px;
+}
+
+.container {
+    padding-top: 20px;
+   
+}
+
+
+    .container::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+    }
+
+#login-body {
+background-color: white;
+position: relative;
+}
+
+    /* ログイン画面.メイン */
+    #login-body .login-main {
+        background-color: white;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+    }
+
+    /* ログイン画面.サイズ */
+    #login-body .login-size {
+        background-color: #C7E0D5;
+        width: 350px;
+        height:300px;
+    }
+
+    /* ログイン画面.ヘッダ */
+    #login-body .login-header {
+        background-color: rgb(121, 90, 138) !important;
+        height: 100px; /*75px;*/
+        text-align: center;
+    }
+
+    /* ログイン画面.ヘッダタイトル */
+    #login-body .login-header-title {
+        color: white;
+padding-top: 30px;/*45px;*/
+font-size: large;/*x-large;*/
+    }
+
+    /* ログイン画面.フォーム */
+    #login-body .login-form {
+        text-align: center;
+    }
+
+    /* ログイン画面.バージョン */
+    #login-body .login-system-version {
+        text-align: right;
+font-size: xx-small;
+color: #005857;
+        margin: 0 0 20px;
+    }
+
+    /* ログイン画面.入力項目 */
+    #login-body input[type="text"], #login-body input[type="password"] {
+        color: black;
+
+border: 1px solid #C7E0D5;
+       
+      
+padding: 3px;
+vertical-align: middle;
+    }
+
+    /* ログイン画面.ボタンエリア */
+    #login-body .login-button-area {
+        height: 20px;
+margin-top: 10px;
+    }
+
+    /* ログイン画面.ボタン */
+    #login-body .login-button {
+        background-color: #C7E0D5;
+        height: 25px;
+border: 1px solid #005857;
+    }
+.card {
+    border: 0;
+}
+
+.cardCorners {
+    border-top-left-radius: 1rem !important;
+    border-top-right-radius: 1rem !important;
+    border-bottom-left-radius: 1rem !important;
+    border-bottom-right-radius: 1rem !important;
+}
+
+.cardBackground1 {
+    background-color: #dee2e6 !important;
+}
+/*Header for Resource Management*/
+.cardBackground2 {
+    background-color: rgb(175, 81, 80) !important;
+}
+/*Header for card-header in individual sections*/
+.cardBackground3 {
+    background-color: lightgray !important;
+}
+
+.cardBackground4 {
+    background-color: rgb(94, 168, 215) !important;
+}
+
+.cardBackground5 {
+    background-color: rgb(243, 174, 72) !important;
+}
+/*Booking Management (normal)*/
+.cardBackground6 {
+    background-color: rgb(121, 90, 138) !important;
+}
+
+.cardBackground7 {
+    background-color: rgb(237, 244, 248) !important;
+}
+/*Booking Management (admin)*/
+.cardBackground8 {
+    background-color: rgb(221, 100, 82) !important;
+}
+.left-top-reduce {
+    border-top-left-radius: 2rem !important;
+}
+
+.right-top-reduce {
+    border-top-right-radius: 2rem !important;
+}
+
+.left-bottom-reduce {
+    border-bottom-left-radius: 2rem !important;
+}
+
+.right-bottom-reduce {
+    border-bottom-right-radius: 2rem !important;
+}
+/*ui-datepicker {
+    background: #333;
+    border: 1px solid #555;
+    color: #EEE;
+}*/
+.like-table {
+        display: table !important;
+}
+.like-table-cell {
+        display: table-cell !important;
+ }
+    .test {
+        width: 30px;
+        height: 30px;
+        background-color: yellow;
+    }
+
+.circle {
+    width: 50px;
+    height: 50px;
+    background: #dbe5ef !important;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    display: table;
+}
+
+.nav-item:focus, .nav-item:hover {
+    text-decoration: none;
+    /*color: #495057;*/
+    /*font-weight: 300;*/
+    color: #495057;
+    font-weight: 600;
+}
+
+.imgsize{
+    width:100%;
+    height:50px;
+}
+
+.loadingcenter {
+    border-image: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(246, 246, 246);
+}
+#loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.7;
+    background-color: rgb(246,246,246);
+    z-index: 1040;
+}
+
+.lds-default {
+    display: inline-block;
+    position: relative;
+    width: 110px;
+    height: 110px;
+    top: calc(50% - 60px);
+    left: calc(50% - 40px);
+}
+
+    .lds-default div {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: #fff;
+        border-radius: 50%;
+        animation: lds-default 1.2s linear infinite;
+        background: blue;
+    }
+
+        .lds-default div:nth-child(1) {
+            animation-delay: 0s;
+            top: 37px;
+            left: 66px;
+        }
+
+        .lds-default div:nth-child(2) {
+            animation-delay: -0.1s;
+            top: 22px;
+            left: 62px;
+        }
+
+        .lds-default div:nth-child(3) {
+            animation-delay: -0.2s;
+            top: 11px;
+            left: 52px;
+        }
+
+        .lds-default div:nth-child(4) {
+            animation-delay: -0.3s;
+            top: 7px;
+            left: 37px;
+        }
+
+        .lds-default div:nth-child(5) {
+            animation-delay: -0.4s;
+            top: 11px;
+            left: 22px;
+        }
+
+        .lds-default div:nth-child(6) {
+            animation-delay: -0.5s;
+            top: 22px;
+            left: 11px;
+        }
+
+        .lds-default div:nth-child(7) {
+            animation-delay: -0.6s;
+            top: 37px;
+            left: 7px;
+        }
+
+        .lds-default div:nth-child(8) {
+            animation-delay: -0.7s;
+            top: 52px;
+            left: 11px;
+        }
+
+        .lds-default div:nth-child(9) {
+            animation-delay: -0.8s;
+            top: 62px;
+            left: 22px;
+        }
+
+        .lds-default div:nth-child(10) {
+            animation-delay: -0.9s;
+            top: 66px;
+            left: 37px;
+        }
+
+        .lds-default div:nth-child(11) {
+            animation-delay: -1s;
+            top: 62px;
+            left: 52px;
+        }
+
+        .lds-default div:nth-child(12) {
+            animation-delay: -1.1s;
+            top: 52px;
+            left: 62px;
+        }
+@keyframes lds-default {
+    0%, 20%, 80%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+}
+
+.hideCursor {
+    cursor: none !important;
+}

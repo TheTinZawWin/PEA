@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:50244/EmployeeService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PEA_Common" />
+  <xs:import schemaLocation="http://localhost:50244/EmployeeService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:50244/EmployeeService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="EmployeeCreate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/PEA_Common" minOccurs="0" name="empModel" nillable="true" type="q1:EMPModel" />
+        <xs:element minOccurs="0" name="ret" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmployeeCreateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EmployeeCreateResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="ret" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeeList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PEA_Common" minOccurs="0" name="empList" nillable="true" type="q2:ArrayOfEMPModel" />
+        <xs:element minOccurs="0" name="ret" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeeListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetEmployeeListResult" type="xs:boolean" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PEA_Common" minOccurs="0" name="empList" nillable="true" type="q3:ArrayOfEMPModel" />
+        <xs:element minOccurs="0" name="ret" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmployeeUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/PEA_Common" minOccurs="0" name="empModel" nillable="true" type="q4:EMPModel" />
+        <xs:element minOccurs="0" name="returnMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmployeeUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EmployeeUpdateResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="returnMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeeById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="id" type="q5:guid" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/PEA_Common" minOccurs="0" name="empt" nillable="true" type="q6:UpdateEMPTModel" />
+        <xs:element minOccurs="0" name="returnMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeeByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetEmployeeByIdResult" type="xs:boolean" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/PEA_Common" minOccurs="0" name="empt" nillable="true" type="q7:UpdateEMPTModel" />
+        <xs:element minOccurs="0" name="returnMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmployeeDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="EMT_ID_LIST" nillable="true" type="q8:ArrayOfstring" />
+        <xs:element minOccurs="0" name="returnMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmployeeDeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EmployeeDeleteResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="returnMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllDataCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="activeCount" type="xs:int" />
+        <xs:element minOccurs="0" name="inactiveCount" type="xs:int" />
+        <xs:element minOccurs="0" name="returnMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllDataCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllDataCountResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="activeCount" type="xs:int" />
+        <xs:element minOccurs="0" name="inactiveCount" type="xs:int" />
+        <xs:element minOccurs="0" name="returnMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
